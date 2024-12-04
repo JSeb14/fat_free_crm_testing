@@ -1,0 +1,1 @@
+timeout 600 bash -c 'while true; do echo "$(date +%Y-%m-%dT%H:%M:%S),$(docker stats --no-stream --format "{{.Container}},{{.Name}},{{.CPUPerc}},{{.MemUsage}}" | tr "\n" " ")" >> docker_stats.csv; sleep 10; done'
