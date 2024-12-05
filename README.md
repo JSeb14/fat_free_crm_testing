@@ -1,9 +1,24 @@
-# fat_free_crm_testing
+# FatFreeCRM Testing
 
-To run:
-1. Start FatFreeCRM per documentation in Docker.
-2. Clone this repo to your local drive
-3. Run the docker_track_5_min.sh script within your FatFreeCRM install to log the performance for 5 minutes.
-   - If you want to run for longer edit the script to have a number larger than 600 in "timeout 600".
-4. Once CPU and Memory Logging is started you can simulate the read and edit loads using the following autocannon commands:
-   ##TODO##
+## Instructions to Run
+
+1. **Start FatFreeCRM**  
+   Follow the documentation to start FatFreeCRM using Docker.  
+
+2. **Clone This Repository**  
+   Clone this repository to your local drive:  
+   ```bash
+   git clone <repository-url>
+   cd fat_free_crm_testing
+3. **Start stress testing of FatFreeCRM using Autocannon**
+   
+   
+4. **Run the Performance Logging Script**
+   Execute the docker_track_5_min.sh script in your FatFreeCRM installation directory to log         performance metrics for 5 minutes:
+   ```bash
+   chmod +x docker_track_5_min.sh  # Make the script executable 
+   ./docker
+
+5. **Wait for Completion (default is 5 minutes)**
+
+6. **Open docker_stats.csv to check CPU and RAM log**
